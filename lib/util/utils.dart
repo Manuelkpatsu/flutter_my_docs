@@ -6,7 +6,7 @@ class Val {
   }
 
   static String getExpiryStr(String expires) {
-    var e = DateUtils.convertToDate(expires);
+    var e = DateUtil.convertToDate(expires);
     var td = DateTime.now();
 
     Duration dif = e!.difference(td);
@@ -31,7 +31,7 @@ class Val {
   }
 }
 
-class DateUtils {
+class DateUtil {
   static DateTime? convertToDate(String input) {
     try {
       var d = DateFormat("yyyy-MM-dd").parseStrict(input);
